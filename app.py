@@ -57,6 +57,9 @@ def recommend():
             })
 
     return jsonify(recommendations)
+@app.route("/")
+def index():
+    return "<h1>✅ SHL Recommendation Engine is Live</h1><p>Send a POST request to /recommend with role, level, and skills.</p>"
 
 if __name__ == "__main__":
     app.run(debug=True)
